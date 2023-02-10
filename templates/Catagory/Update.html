@@ -1,0 +1,17 @@
+{%extends 'basepage.html'%}
+{%block title%}
+Update Catagory
+{%endblock%}
+{%block content%}
+<div  style="color:green">
+  <h1>{{msg}}</h1>
+
+</div>
+<form method="post">
+  {%csrf_token%}
+  <input type="hidden" value="{{cat.id}}" name="'id">
+  <label>Catagory Name</label>
+  <input type="text" name="catgoryname" value="{{cat.name}}"/>
+  <input type="submit" value="Update">
+</form>
+{%endblock%}
